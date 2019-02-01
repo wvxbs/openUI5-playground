@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8">
-	<title>App</title>
+	<title>App	</title>
 	<script src="http://<<server>>:<<port>>/resources/sap-ui-core.js"
 		id="sap-ui-bootstrap"
 		data-sap-ui-theme="sap_belize"
@@ -34,6 +34,8 @@
 					}
 				})
 			})
+			app.addPage(page1).addPage(page2)
+			app.placeAt('content')
 		})
 	</script>
 </head>
