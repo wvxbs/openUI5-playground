@@ -31,15 +31,22 @@
           "sap.m": {}
         }
       },
+      "contentDensities": {
+
+      },
+      "handleValidation" : true,
       "models": {
-        "i18n": {
           "type": "sap.ui.model.resource.ResourceModel",
           "settings": {
             "bundleName": "sap.ui.demo.sidebar.i18n.i18n"
           }
         }
       },
+      "sap.platform.hcp" : {
+
+      },
       "dataSources": {
+        "i18n": {
         "default": {
             "uri": "https://services.odata.org/TripPinRESTierService/(S(id))/",
             "type": "OData",
@@ -48,6 +55,6 @@
             }
         }
     }
-      
+
     }
   }

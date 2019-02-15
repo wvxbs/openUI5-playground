@@ -2,10 +2,10 @@ sap.ui.define([
     'sap/ui/core/mvc/Controller',
     'sap/ui/model/json/JSONModel',
     'sap/m/MessageToast',
-    'sap/m/MesssaBox'
-], function(Controller, JSONModel, MessageToast, MesssaBox) {
+    'sap/m/MessageBox'
+], function(Controller, JSONModel, MessageToast, MessageBox) {
     'use strict'
-    
+
     return Controller.extend('sap.ui.demo.sidebar.controller.App', {
         onInit : function () {
             var JSONData = {
@@ -25,7 +25,7 @@ sap.ui.define([
             oBinding.refresh()
 
             MessageToast.show(this._getText('refreshSuccessMessage'))
-            
+
         },
 
         _getText : function (sTextId, aArgs) {
