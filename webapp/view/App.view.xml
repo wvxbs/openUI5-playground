@@ -1,0 +1,27 @@
+<mvc:View>
+    <Table
+        id="peopleList"
+        growing="true"
+        growingTreshold="10"
+        items="{
+            path: '/People'
+        }"
+    >
+        <headerToolbar>
+            <OverflowToolbar>
+                <content>
+                    <ToolbarSpacer />
+                    <Button 
+                        id="refreshUsersButton"
+                        icon="sap-icon://refresh"
+                        tooltip="i18nrefreshButtonText"
+                        press="onRefresh"
+                    />
+                </content>
+            </OverflowToolbar>
+        </headerToolbar>
+        <columns>
+            
+        </columns>
+    </Table>
+</mvc:View>

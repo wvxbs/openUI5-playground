@@ -17,7 +17,7 @@ sap.ui.define([
         },
 
         onRefresh : function() {
-            var oBinding = this.byId('peopleList').getBinding('itens')
+            var oBinding = this.byId('peopleList').getBinding('items')
 
             if(oBinding.hasPendingChanges()) {
                 MessageBox.error(this._getText('refreshSuccessMessage'))
@@ -28,8 +28,8 @@ sap.ui.define([
             
         },
 
-        _getText : function () {
-            return this.getOwnerComponent().getModel('i18n').getResourceBundle().getText(sTextId, args)
+        _getText : function (sTextId, aArgs) {
+            return this.getOwnerComponent().getModel('i18n').getResourceBundle().getText(sTextId, aArgs)
         }
     })
 })
