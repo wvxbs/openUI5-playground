@@ -1,0 +1,27 @@
+{
+  "name": "openui5-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ui5 serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wvxbs/openUI5-playground.git"
+  },
+  "author": "",
+  
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wvxbs/openUI5-playground/issues"
+  },
+  "homepage": "https://github.com/wvxbs/openUI5-playground#readme",
+  "dependencies": {
+    "@openui5/sap.ui.core": "^1.62.1",
+    "@openui5/themelib_sap_belize": "^1.62.1",
+    "@ui5/cli": "^1.2.0",
+    "@ui5/server": "^1.0.0"
+  }
+}
