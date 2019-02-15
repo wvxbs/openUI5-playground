@@ -35,8 +35,32 @@ sap.ui.define([
 
         onSearch() : function() {
           var oView = this.getView(),
-          sValue = oView.byId('searchField').getValue()
-        }
+          sValue = oView.byId('searchField').getValue(),
+          oFilter = new Filter('LastName', FilterOperator.Contains, sValue)
+
+          oView.byId('peopleList').getBinding('items').filter(oFilter, FilterType.Application)
+        },
+app
+        onSort : function () {
+          var oView = this.getView(),
+            aStates = [undefined, 'asc', 'sortDescending'],
+            sMessage,
+            iOrder = oVIew.getModel('appVIew').getProperty('/order')
+
+          iOrder = (iOrder + 1) % aStates.lenght
+          var sOrder = aStates[iOrder]
+
+          oView.getModel('appView').setProperty('/order', iOrder)
+          oView.byId('peopleList').getBinding(' items').sort(sOrder && new Sorter('LastName', sOrder === 'desc'))
+
+          sMessage = this._getText('sortMessage', [this._getText(aStateTextIds[iOrder])])
+          MessageToast.show(sMessage)
+      },
+
+      onDelete : function() {
+
+
+      },
 
         _getText : function (sTextId, aArgs) {
             return this.getOwnerComponent().getModel('i18n').getResourceBundle().getText(sTextId, aArgs)

@@ -1,27 +1,46 @@
-<mvc:View>
+<mvc:View
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+>
     <Table
         id="peopleList"
         growing="true"
         growingTreshold="10"
         items="{
-            path: '/People'
+            path: '/People' ,
+            parameters : {
+            $count: true
+            }
         }"
+        mode="singleSelectLeft"
     >
         <headerToolbar>
             <OverflowToolbar>
                 <content>
                     <ToolbarSpacer />
-                    <Button 
+                    <SearchField
+                      id="searchField"
+                      width="20%"
+                      placeholder="{i18n>searchFieldPlaceholder}"
+                      search=".onSearch"
+                    />
+                    <Button
                         id="refreshUsersButton"
                         icon="sap-icon://refresh"
                         tooltip="i18nrefreshButtonText"
-                        press="onRefresh"
+                        press=".onRefresh"
+                    />
+                    <Button
+                      id="sortUsersButton"
+                      press="onSort"
+                      tooltip="{i18n>sortButtonText}"
+                      icon="sap-icon://sort"
                     />
                 </content>
             </OverflowToolbar>
         </headerToolbar>
         <columns>
-            
+
         </columns>
     </Table>
 </mvc:View>

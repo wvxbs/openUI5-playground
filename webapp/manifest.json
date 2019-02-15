@@ -4,8 +4,8 @@
       "id": "sap.ui.demo.sidebar",
       "type": "application",
       "i18n": "i18n/i18n.properties",
-      "title": "{{appTitle}}",
-      "description": "{{appDescription}}",
+      "title": "oData",
+      "description": "wow",
       "applicationVersion": {
         "version": "1.0.0"
       }
@@ -55,6 +55,6 @@
             }
         }
     }
-
     }
+
   }
