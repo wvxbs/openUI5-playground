@@ -1,27 +1,16 @@
 {
-  "name": "openui5-playground",
+  "name": "ODataV4Tutorial",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "author": "SAP SE",
+  "description": "UI5 Demo App - ODataV4 Tutorial",
   "scripts": {
-    "start": "ui5 serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wvxbs/openUI5-playground.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wvxbs/openUI5-playground/issues"
-  },
-  "homepage": "https://github.com/wvxbs/openUI5-playground#readme",
+    "start": "ui5 serve"
+},
   "dependencies": {
-    "@openui5/sap.m": "^1.60.0",
-    "@openui5/sap.ui.core": "^1.60.0",
-    "@openui5/sap.ui.layout": "^1.60.0",
-    "@openui5/themelib_sap_belize": "^1.60.0",
-    "ui5-loader": "^1.0.6"
+    "@openui5/sap.m": "^1",
+    "@openui5/sap.ui.core": "^1",
+    "@openui5/sap.ui.layout": "^1",
+    "@openui5/themelib_sap_belize": "^1"
   }
 }
