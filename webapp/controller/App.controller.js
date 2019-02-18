@@ -21,12 +21,9 @@ sap.ui.define([
         return result;
       },
 
-      onB1Press : function () {
-        this.getSplitAppObj().to(this.createId('query'))
-      },
-
-      onB2Press : function () {
-        this.getSplitAppObj().to.this.createId('wow')
+      onListItemPress : function(oEvent) {
+        var sToPageId = oEvent.getParameter("listItem").getCustomData()[0].getValue();
+        this.getSplitAppObj().toDetail(this.createId(sToPageId));
       },
     })
 })

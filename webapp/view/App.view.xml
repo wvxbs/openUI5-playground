@@ -12,10 +12,12 @@
 			<masterPages>
 				<Page id="master" title="Navigation" backgroundStyle="solid">
 					<content>
-						<FlexBox alignItens="Center" justifyContent="Center" class="sapUiSmallMarginTop">
-						<Button id="B1" text="Query" class="sapUiSmallMargin" press=".onB1Press" />
-						<Button id="B2" text="WoW" class="sapUiSmallMargin" />
-					</FlexBox>
+						<List itemPress="onListItemPress">
+						<items>
+							<StandardListItem title="Query" type="Active" custom:to="queryPage"/>
+							<StandardListItem title="Wow" type="Active" custom:to="wowPage"/>
+						</items>
+					</List>
 					</content>
 				</Page>
 			</masterPages>
