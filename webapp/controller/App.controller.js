@@ -10,7 +10,23 @@ sap.ui.define([
     return Controller.extend('sap.ui.core.tutorial.odatav4.controller.App', {
 
       onInit : function () {
-        
-      }
+
+      },
+
+      getSplitAppObj : function() {
+        var result = this.byId("SplitAppDemo");
+        if (!result) {
+          Log.info("SplitApp object can't be found");
+        }
+        return result;
+      },
+
+      onB1Press : function () {
+        this.getSplitAppObj().to(this.createId('query'))
+      },
+
+      onB2Press : function () {
+        this.getSplitAppObj().to.this.createId('wow')
+      },
     })
 })

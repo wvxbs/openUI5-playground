@@ -5,12 +5,19 @@
 	controllerName="sap.ui.core.tutorial.odatav4.controller.App"
 	displayBlock="true"
 >
-		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="queryPage" orientationChange="onOrientationChange">
 			<detailPages>
 				<mvc:XMLView viewName="sap.ui.core.tutorial.odatav4.view.Query" />
 			</detailPages>
 			<masterPages>
-				<mvc:XMLView viewName="sap.ui.core.tutorial.odatav4.view.Sidebar" />
+				<Page id="master" title="Navigation" backgroundStyle="solid">
+					<content>
+						<FlexBox alignItens="Center" justifyContent="Center" class="sapUiSmallMarginTop">
+						<Button id="B1" text="Query" class="sapUiSmallMargin" press=".onB1Press" />
+						<Button id="B2" text="WoW" class="sapUiSmallMargin" />
+					</FlexBox>
+					</content>
+				</Page>
 			</masterPages>
 		</SplitApp>
 </mvc:View>
