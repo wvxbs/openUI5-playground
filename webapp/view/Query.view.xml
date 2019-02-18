@@ -4,7 +4,7 @@
   xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
   controllerName="sap.ui.core.tutorial.odatav4.controller.Query"
 >
-  <Page busy="{appView>/busy}" title="{i18n>peoplePageTitle}" class="custom-navbar">
+  <Page busy="{appView>/busy}" title="{i18n>peoplePageTitle}" class="custom-navbar" id="queryPage">
     <content>
       <Table
         id="peopleList"
