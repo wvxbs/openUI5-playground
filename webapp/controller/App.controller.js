@@ -11,10 +11,6 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("sap.ui.core.tutorial.odatav4.controller.App", {
-
-		/**
-		 *  Hook for initializing the controller
-		 */
 		onInit : function () {
 			var oMessageManager = sap.ui.getCore().getMessageManager(),
 				oMessageModel = oMessageManager.getMessageModel(),
@@ -26,6 +22,12 @@ sap.ui.define([
 					usernameEmpty : true,
 					order : 0
 				});
+
+				this,getSplitAppObj().setHomeIcon({
+					'phone' : 'phone-icon.png',
+					'tablet' : 'tablet-icon.png',
+					'icon': 'desktop.ico'
+				})
 			this.getView().setModel(oViewModel, "appView");
 			this.getView().setModel(oMessageModel, "message");
 
@@ -33,15 +35,13 @@ sap.ui.define([
 			this._bTechnicalErrors = false;
 		},
 
+		onOrientationChange : function (oEvent) {
+			var bLandscapeOrientation = oEvent.getParameter('ladscape'),
+			sMsg = 'Orientation now is :' + (bLandscapeOrientation ? "")
+		},
 
-		/* =========================================================== */
-		/*           begin: event handlers                             */
-		/* =========================================================== */
 
 
-		/**
-		 * Create a new entry.
-		 */
 		onCreate : function () {
 			var oList = this.byId("peopleList"),
 				oBinding = oList.getBinding("items"),
@@ -60,7 +60,6 @@ sap.ui.define([
 			this._setUIChanges(true);
 			this.getView().getModel("appView").setProperty("/usernameEmpty", true);
 
-			// Select and focus the table row that contains the newly created entry
 			oList.getItems().some(function (oItem) {
 				if (oItem.getBindingContext() === oContext) {
 					oItem.focus();
@@ -70,9 +69,6 @@ sap.ui.define([
 			});
 		},
 
-		/**
-		 * Delete an entry.
-		 */
 		onDelete : function () {
 			var oSelected = this.byId("peopleList").getSelectedItem();
 
