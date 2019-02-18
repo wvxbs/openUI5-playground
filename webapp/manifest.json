@@ -39,7 +39,8 @@
 			"libs": {
 				"sap.m": {},
 				"sap.ui.core": {},
-				"sap.ui.layout": {}
+				"sap.ui.layout": {},
+				"sap.f" : {}
 			}
 		},
 		"contentDensities": {
@@ -53,6 +54,11 @@
 				"settings": {
 					"bundleName": "sap.ui.core.tutorial.odatav4.i18n.i18n"
 				}
+			},
+			"resources": {
+					"css": [{
+						"uri" : "css/style.css"
+						}]
 			},
 			"": {
 				"dataSource": "default",

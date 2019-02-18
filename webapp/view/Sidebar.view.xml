@@ -1,7 +1,12 @@
 <mvc:View
+  xmlns="sap.m"
   xmlns:mvc="sap.ui.core.mvc"
-	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
-	controllerName="sap.m.sample.SplitApp.C"
+  xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+  controllerName="sap.ui.core.tutorial.odatav4.controller.App"
 >
-
+  <Page>
+    <content>
+      
+    </content>
+  </Page>
 </mvc:View>

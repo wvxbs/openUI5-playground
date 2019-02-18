@@ -1,10 +1,16 @@
 <mvc:View
-	controllerName="sap.ui.core.tutorial.odatav4.controller.App"
-	displayBlock="true"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	controllerName="sap.ui.core.tutorial.odatav4.controller.App"
+	displayBlock="true"
 >
 		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
-				<mvc:XMLView="sap.ui.core.tutorial.odatav4.view.Query" />
+			<detailPages>
+				<mvc:XMLView viewName="sap.ui.core.tutorial.odatav4.view.Query" />
+			</detailPages>
+			<masterPages>
+				<mvc:XMLView viewName="sap.ui.core.tutorial.odatav4.view.Sidebar" />
+			</masterPages>
 		</SplitApp>
 </mvc:View>

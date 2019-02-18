@@ -1,5 +1,10 @@
-<mvc:View>
-  <Page busy="{appView>/busy}" title="{i18n>peoplePageTitle}">
+<mvc:View
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+  controllerName="sap.ui.core.tutorial.odatav4.controller.Query"
+>
+  <Page busy="{appView>/busy}" title="{i18n>peoplePageTitle}" class="custom-navbar">
     <content>
       <Table
         id="peopleList"
