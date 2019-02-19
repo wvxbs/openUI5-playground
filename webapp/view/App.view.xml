@@ -27,7 +27,7 @@
 										<ToolbarSpacer/>
 										<SearchField
 											id="searchField"
-											width="20%"
+											width="75%"
 											placeholder="{i18n>searchFieldPlaceholder}"
 											enabled="{= !${appView>/hasUIChanges}}"
 											search=".onSearch"/>
