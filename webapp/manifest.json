@@ -32,7 +32,7 @@
 			"viewName": "sap.ui.core.tutorial.odatav4.view.App",
 			"type": "XML",
 			"async": true,
-			"id": "appView"
+			"id": "data"
 		},
 		"dependencies": {
 			"minUI5Version": "1.48.0",
