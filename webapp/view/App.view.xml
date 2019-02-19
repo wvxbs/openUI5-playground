@@ -6,7 +6,6 @@
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 >
 		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
-
 			<detailPages>
 				<Page busy="{appView>/busy}" title="{i18n>peoplePageTitle}" id="queryPage">
 					<content>
@@ -126,7 +125,7 @@
 					</footer>
 				</Page>
 				<Page
-				  title="WoW" id="wowPage">
+				  title="WoW" id="wowPage" class="sapUiStdPage" showNavButton="true" navButtonText="back" navButtonPress="onPressDetailBack">
 				  <content>
 						<FlexBox justifyContent="Center" textAlign="Center">
 							<Title title="Wow" />

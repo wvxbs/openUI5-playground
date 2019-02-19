@@ -253,6 +253,14 @@ sap.ui.define([
 			oModel.setProperty("/busy", bIsBusy)
 		},
 
+		onPressDetailBack : function() {
+			this.getSplitAppObj().backDetail();
+		},
+
+		onPressMasterBack : function() {
+			this.getSplitAppObj().backMaster();
+		},
+
 		onListItemPress : function(oEvent) {
 			var sToPageId = oEvent.getParameter("listItem").getCustomData()[0].getValue();
 
