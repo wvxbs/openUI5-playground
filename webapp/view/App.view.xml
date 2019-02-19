@@ -7,7 +7,7 @@
 >
 		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
 			<detailPages>
-				<Page busy="{appView>/busy}" title="{i18n>peoplePageTitle}" id="queryPage">
+				<Page busy="{appView>/busy}" title="{i18n>peoplePageTitle}" id="queryPage" class="sapUiStdPage">
 					<content>
 						<Table
 							id="peopleList"

@@ -22,6 +22,13 @@ sap.ui.define([
 					usernameEmpty : true,
 					order : 0
 				})
+
+				this.getSplitAppObj().setHomeIcon({
+				'phone':'phone-icon.png',
+				'tablet':'tablet-icon.png',
+				'icon':'desktop.ico'
+			})
+
 			this.getView().setModel(oViewModel, "appView")
 			this.getView().setModel(oMessageModel, "message")
 
