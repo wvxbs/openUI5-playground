@@ -4,8 +4,8 @@ sap.ui.define([
   'sap/ui/core/mvc/Controller',
   'sap/ui/model/json/JSONModel',
   'sap/m/MessageToast'
-], function () {
-  return shellDemo.extend('sap.ui.core.tutorial.odatav4.controller.shellDemo', {
+], function (JQuery, Fragment, Controller, JSONModel, MessageToast) {
+  return Controller.extend('sap.ui.core.tutorial.odatav4.controller.shellDemo', {
     onInit : function () {
 
     },
