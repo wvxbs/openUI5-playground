@@ -130,6 +130,9 @@
 						<mvc:XMLView viewName="sap.ui.core.tutorial.odatav4.view.File" />
 				  </content>
 				</Page>
+				<Page id="toolbarPage">
+					<mvc:XMLView viewName="sap.ui.core.tutorial.odatav4.view.shellDemo" />
+				</Page>
 			</detailPages>
 			<masterPages>
 				<Page
@@ -139,6 +142,7 @@
 							<items>
 								<StandardListItem title="Query" type="Active" custom:to="queryPage" />
 								<StandardListItem title="File Viewer" type="Active" custom:to="wowPage" />
+								<StandardListItem title="Toolbar Page" type="Active" custom:to="toolbarPage" />
 							</items>
 						</List>
 				  </content>

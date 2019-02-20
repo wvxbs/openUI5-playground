@@ -13,21 +13,18 @@ sap.ui.define([
     };
 
     var loadModelIntoViewer = function(viewer, remoteUrl, sourceType, localFile) {
-        //what is currently loaded in the view is destroyed
         viewer.destroyContentResources();
 
         var source = remoteUrl || localFile;
 
         if (source) {
 
-            //content of viewer is replaced with new data
             var contentResource = new ContentResource({
                 source: remoteUrl,
                 sourceType: sourceType,
                 sourceId: "abc"
             });
 
-            //content: chosen path. content added to the view
             viewer.addContentResource(contentResource);
         }
     };
