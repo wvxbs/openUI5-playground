@@ -130,7 +130,7 @@
 						<mvc:XMLView viewName="sap.ui.core.tutorial.odatav4.view.File" />
 				  </content>
 				</Page>
-				<Page id="toolbarPage">
+				<Page title="ushell Demo" id="toolbarPage">
 					<mvc:XMLView viewName="sap.ui.core.tutorial.odatav4.view.shellDemo" />
 				</Page>
 			</detailPages>

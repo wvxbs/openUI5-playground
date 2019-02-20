@@ -11,7 +11,13 @@ sap.ui.define([
     },
 
     handlePressConfiguration : function () {
-
+      var oItem = oEvent.getSource()
+      var oShell = this.ById('myShell')
+      var bState = oShell.getShowPane()
+      oShell.setShowPanel(!bState)
+      oItem.showShowMarker(!bState)
+      oItem.setSelected(!bState)
+      
     },
 
     handleLogoffPress : function () {
