@@ -1,0 +1,20 @@
+<mvc:View
+    controllerName="sap.ui.core.tutorial.odatav4.controller.AppLauncher"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+>
+    <Page title="Select an app to launch">
+        <content>
+            <FlexBox wrap="wrap">
+                <GenericTile 
+                    header="PDF Viewer"
+                    subheader="wow"
+                />
+                <GenericTile 
+                    header="DOCX Viewer"
+                    subheader="yay"
+                />  
+            </FlexBox>
+        </content>
+    </Page>
+</mvc:View>

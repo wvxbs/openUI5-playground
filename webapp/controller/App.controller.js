@@ -220,11 +220,6 @@ sap.ui.define([
 		},
 
 
-		/* =========================================================== */
-		/*           end: event handlers                               */
-		/* =========================================================== */
-
-
 		/**
 		 * Convenience method for retrieving a translatable text.
 		 * @param {string} sTextId - the ID of the text to be retrieved.
@@ -236,9 +231,7 @@ sap.ui.define([
 		},
 
 		/**
-		 * Set hasUIChanges flag in View Model
-		 * @param {boolean} [bHasUIChanges] - set or clear hasUIChanges
-		 * if bHasUIChanges is not set, the hasPendingChanges-function of the OdataV4 model determines the result
+		 * @param {boolean} [bHasUIChanges]
 		 */
 		_setUIChanges : function (bHasUIChanges) {
 			if (this._bTechnicalErrors) {

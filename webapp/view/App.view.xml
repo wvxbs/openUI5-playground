@@ -5,8 +5,13 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 >
-		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+		<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange" transition="fade">
 			<detailPages>
+				<Page title="App Launcher" id="launcherPage" class="sapUiStdPage">
+					<content>
+						<mvc:XMLView viewName="sap.ui.core.tutorial.odatav4.view.AppLauncher"/>	
+					</content>
+				</Page>
 				<Page busy="{appView>/busy}" title="{i18n>peoplePageTitle}" id="queryPage" class="sapUiStdPage">
 					<content>
 						<Table
@@ -130,9 +135,6 @@
 						<mvc:XMLView viewName="sap.ui.core.tutorial.odatav4.view.File" />
 				  </content>
 				</Page>
-				<Page title="ushell Demo" id="toolbarPage">
-					<mvc:XMLView viewName="sap.ui.core.tutorial.odatav4.view.shellDemo" />
-				</Page>
 			</detailPages>
 			<masterPages>
 				<Page
@@ -140,9 +142,9 @@
 				  <content>
 						<List itemPress="onListItemPress">
 							<items>
+								<StandardListItem title="App Launcher" type="Active" custom:to="launcherPage" />
 								<StandardListItem title="Query" type="Active" custom:to="queryPage" />
 								<StandardListItem title="File Viewer" type="Active" custom:to="wowPage" />
-								<StandardListItem title="Toolbar Page" type="Active" custom:to="toolbarPage" />
 							</items>
 						</List>
 				  </content>
