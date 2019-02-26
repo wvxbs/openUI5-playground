@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (UIComponent, models) {
 	"use strict";
 
-	return UIComponent.extend("sap.suite.ui.commons.demokit.tutorial.icecream.01.Component", {
+	return UIComponent.extend("sap.ui.core.tutorial.odatav4.Component", {
 
 		metadata: {
 			manifest: "json"
@@ -24,13 +24,6 @@ sap.ui.define([
 
 			// create the views based on the url/hash
 			this.getRouter().initialize();
-		},
-		createContent: function () {
-			// create root view
-			return sap.ui.view("AppView", {
-				viewName: "sap.suite.ui.commons.demokit.tutorial.icecream.01.view.App",
-				type: "XML"
-			});
 		}
 	});
 });

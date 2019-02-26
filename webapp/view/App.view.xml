@@ -1,11 +1,10 @@
 <mvc:View
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
-	displayBlock="true">
-
-	<Shell>
+	displayBlock="true"
+>
 		<App id="tutorialApp"
-			 backgroundImage="images/startpage.jpg"
-			 backgroundOpacity="0.3"/>
-	</Shell>
+			backgroundImage="images/startpage.jpg"
+			backgroundOpacity="0.3"/>
 </mvc:View>
+

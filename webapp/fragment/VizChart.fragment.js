@@ -1,4 +1,4 @@
-sap.ui.define([
+ sap.ui.define([
 	"sap/viz/ui5/controls/VizFrame",
 	"sap/viz/ui5/data/FlattenedDataset",
 	"sap/viz/ui5/data/DimensionDefinition",
@@ -8,7 +8,7 @@ sap.ui.define([
 ], function (VizFrame, FlattenedDataset, DimensionDefinition, MeasureDefinition, FeedItem, JSONModel) {
 	"use strict";
 
-	return sap.ui.jsfragment("sap.suite.ui.commons.demokit.tutorial.icecream.01.fragment.VizChart", {
+	return sap.ui.jsfragment("sap.ui.core.tutorial.odatav4.fragment.VizChart", {
 		createContent: function (controller) {
 
 			var oVizFrame = new VizFrame({

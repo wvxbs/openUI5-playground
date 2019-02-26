@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.01.controller.Startpage"
+	controllerName="sap.ui.core.tutorial.odatav4.controller.Startpage"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	xmlns:layout="sap.ui.layout">
@@ -10,6 +10,23 @@
 				text="{i18n>startpageTilesGroupTitle}"
 				class="sapUiTinyMarginBegin"/>
 			<layout:HorizontalLayout allowWrapping="true">
+				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" 
+				header="{i18n>startpagePFTileTitle}" subheader="{i18n>startpagePFTileSubTitle}">
+					<TileContent>
+						<content>
+							<NumericContent 
+								scale="%" 
+								value="{
+										path: 'process>/Nodes',
+										formatter: '.getProgress'
+									}"
+								icon="sap-icon://factory"	
+							>
+							
+							</NumericContent>
+						</content>
+					</TileContent>
+				</GenericTile>
 			</layout:HorizontalLayout>
 		</layout:VerticalLayout>
 	</Page>

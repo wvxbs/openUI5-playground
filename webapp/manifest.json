@@ -2,7 +2,7 @@
 	"_version": "1.1.0",
 	"sap.app": {
 		"_version": "1.1.0",
-		"id": "sap.suite.ui.commons.demokit.tutorial.icecream.01",
+		"id": "sap.ui.core.tutorial.odatav4",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -38,7 +38,7 @@
 	"sap.ui5": {
 		"_version": "1.1.0",
 		"rootView": {
-			"viewName": "sap.suite.ui.commons.demokit.tutorial.icecream.01.view.App",
+			"viewName": "sap.ui.core.tutorial.odatav4.view.App",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -59,7 +59,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "sap.suite.ui.commons.demokit.tutorial.icecream.01.i18n.i18n"
+					"bundleName": "sap.ui.core.tutorial.odatav4.i18n.i18n"
 				}
 			},
 			"process": {
@@ -83,10 +83,10 @@
 			"config": {
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
-				"viewPath": "sap.suite.ui.commons.demokit.tutorial.icecream.01.view",
+				"viewPath": "sap.ui.core.tutorial.odatav4.view",
 				"controlId": "tutorialApp",
 				"controlAggregation": "pages",
-				"transition": "slide",
+				"transition": "fade",
 				"bypassed": {
 					"target": [
 						"startpage"
