@@ -10,7 +10,7 @@
 				text="{i18n>startpageTilesGroupTitle}"
 				class="sapUiTinyMarginBegin"/>
 			<layout:HorizontalLayout allowWrapping="true">
-				<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" 
+				<GenericTile class="sapUiSmallMargin" 
 				header="{i18n>startpagePFTileTitle}" subheader="{i18n>startpagePFTileSubTitle}">
 					<TileContent>
 						<content>
@@ -22,8 +22,21 @@
 									}"
 								icon="sap-icon://factory"	
 							>
-							
 							</NumericContent>
+						</content>
+					</TileContent>
+				</GenericTile>
+				<GenericTile class="sapUiSmallMargin" header="{i18n>startpageUserReviewsTileTitle}">
+					<TileContent>
+						<content>
+							<NumericContent 
+								value="{
+											path: 'review>UserReviews',
+											formatter: '.getEntityCount'
+										}"
+								indicator="None"
+								valuecolor="Neutral"						
+							/>
 						</content>
 					</TileContent>
 				</GenericTile>
