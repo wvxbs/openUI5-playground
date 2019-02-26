@@ -2,7 +2,9 @@
 	controllerName="sap.ui.core.tutorial.odatav4.controller.Startpage"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
-	xmlns:layout="sap.ui.layout">
+	xmlns:layout="sap.ui.layout"
+	xmlns:micro="sap.suite.ui.microchart"
+>
 	<Page title="{i18n>title}">
 		<layout:VerticalLayout class="sapUiResponsiveMargin">
 			<Title
@@ -39,7 +41,50 @@
 							/>
 						</content>
 					</TileContent>
-				</GenericTile>
+				</GenericTile>	
+				<GenericTile
+                     class="sapUiSmallMargin"
+                     header="{
+                         parts: [
+                             'i18n>startpageCCTileTitle',
+                             'business>/year',
+                             'business>/currency'
+                         ],
+                         formatter: '.formatMessage'
+                     }">
+                     <tileContent>
+                         <TileContent>
+                             <content>
+                                 <micro:BulletMicroChart
+                                     size="Responsive"
+                                     targetValue="{business>/plannedExpenses}"
+                                     targetValueLabel="{
+                                        path: 'business>/plannedExpenses',
+                                        formatter: '.formatNumber'
+                                    }"
+                                     actualValueLabel="{
+                                        path: 'business>/expenses',
+                                        formatter: '.formatNumber'
+                                    }"
+                                     minValue="0">
+                                     <micro:actual>
+                                         <micro:BulletMicroChartData
+                                             value="{business>/expenses}"
+                                             color="Critical" />
+                                     </micro:actual>
+                                     <micro:thresholds>
+                                         <micro:BulletMicroChartData
+                                             value="{business>/expensesCritical}"
+                                             color="Critical" />
+                                         <micro:BulletMicroChartData
+                                             value="{business>/budget}"
+                                             color="Error" />
+                                     </micro:thresholds>
+                                 </micro:BulletMicroChart>
+                             </content>
+                         </TileContent>
+                     </tileContent>
+                 </GenericTile> 
 			</layout:HorizontalLayout>
 		</layout:VerticalLayout>
 	</Page>
