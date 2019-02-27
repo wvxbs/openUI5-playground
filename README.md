@@ -1,1 +1,0 @@
-# openUI5-playground
