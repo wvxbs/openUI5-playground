@@ -5,7 +5,7 @@
 	xmlns:layout="sap.ui.layout"
 	xmlns:microchart="sap.suite.ui.microchart">
 	<Page title="{i18n>title}">
-		<layout:VerticalLayout class="sapUiResponsiveMargin">
+		<layout:VerticalLayout class="sapUiSmallMarginTop">
 			<Title
 				titleStyle="H2"
 				text="{i18n>startpageTilesGroupTitle}"
