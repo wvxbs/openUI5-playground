@@ -15,6 +15,11 @@ sap.ui.define([
 
 		formatMessage: formatMessage,
 
+		onNavToProcessFlow : function () {
+			this.getRouter().navTo('processFlow')
+		},
+
+		
 		getProgress: function (aNodes) {
 			if (!aNodes || aNodes.length === 0) {
 				return 0
