@@ -1,7 +1,7 @@
 sap.ui.define([
 	'sap/ui/core/mvc/Controller',
-	'sap/ui/core/format/NumberFormat',
 	'sap/ui/model/json/JSONModel',
+	'sap/ui/core/format/NumberFormat',
 	'sap/base/strings/formatMessage'
 ], function (Controller, JSONModel, NumberFormat, formatMessage) {
 	'use strict'
@@ -11,39 +11,37 @@ sap.ui.define([
 			var sDataPath = sap.ui.require.toUrl('sap/ui/core/tutorial/odatav4/model/data') + '/News.json'
 			var oModel = new JSONModel(sDataPath)
 			this.getView().setModel(oModel, 'news')
-		},	
-		
-		getProgress : function(aNodes) {
-			if(!aNodes || aNodes.lenght === 0) {
+		},
+
+		formatMessage: formatMessage,
+
+		getProgress: function (aNodes) {
+			if (!aNodes || aNodes.length === 0) {
 				return 0
 			}
-
 			var iSum = 0
-
-			for(var i =0; i < aNodes.lenght; i++) {
+			for (var i = 0 ;i < aNodes.length; i++) {
 				iSum += aNodes[i].state === 'Positive'
 			}
-
-			var fPercent = (iSum / aNodes.lenght) * 100
+			var fPercent = (iSum / aNodes.length) * 100
 			return fPercent.toFixed(0)
-
 		},
 
-		getEntityCount : function(entities) {
-			return entities && entities.lenght || 0
-
+		getEntityCount: function (entities) {
+			return entities && entities.length || 0
 		},
 
-		formatNumber : function (value) {
+		formatNumber: function (value) {
 			var oFloatFormatter = NumberFormat.getFloatInstance({
-				style : 'short',
+				style: 'short',
 				decimals: 1
 			})
-			return oFloatFormatter.format(value)	
+			return oFloatFormatter.format(value)
 		},
-		formatJSONDate: function(date) {
-            var oDate = new Date(Date.parse(date))
-            return oDate.toLocaleDateString()
-        }
-    })
+
+		formatJSONDate: function (date) {
+			var oDate = new Date(Date.parse(date))
+			return oDate.toLocaleDateString()
+		}
+	})
 })
