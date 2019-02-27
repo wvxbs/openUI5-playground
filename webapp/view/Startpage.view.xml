@@ -14,7 +14,9 @@
 				<GenericTile
 					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
 					header="{i18n>startpagePFTileTitle}"
-					subheader="{i18n>startpagePFTileSubTitle}">
+					subheader="{i18n>startpagePFTileSubTitle}"
+					press=".onNavToProcessFlow"
+				>
 					<tileContent>
 						<TileContent>
 							<content>
@@ -38,7 +40,9 @@
 							'business>/currency'
 						],
 						formatter: '.formatMessage'
-					}">
+					}"
+					press="onNavToReviews"
+					>
 					<tileContent>
 						<TileContent>
 							<content>
@@ -74,7 +78,9 @@
 				</GenericTile>
 				<GenericTile
 					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
-					header="{i18n>startpageUserReviewsTileTitle}">
+					header="{i18n>startpageUserReviewsTileTitle}"
+					press="onNavToChartContainer"
+				>
 					<tileContent>
 						<TileContent>
 							<content>
