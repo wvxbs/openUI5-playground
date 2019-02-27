@@ -1,53 +1,60 @@
-	{
-	"_version": "1.12.0",
+{
+	"_version": "1.1.0",
 	"sap.app": {
+		"_version": "1.1.0",
 		"id": "sap.ui.core.tutorial.odatav4",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
 			"version": "1.0.0"
 		},
-		"title": "{{appTitle}}",
+		"title": "{{title}}",
 		"description": "{{appDescription}}",
-		"dataSources": {
-			"default": {
-				"uri": "https://services.odata.org/TripPinRESTierService/(S(id))/",
-				"type": "OData",
-				"settings": {
-					"odataVersion": "4.0"
-				}
-			}
-		}
+		"resources": "resources.json",
+		"ach": "ach"
 	},
 	"sap.ui": {
+		"_version": "1.1.0",
 		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
 		"deviceTypes": {
 			"desktop": true,
 			"tablet": true,
 			"phone": true
-		}
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_hcw",
+			"sap_belize"
+		]
 	},
 	"sap.ui5": {
+		"_version": "1.1.0",
 		"rootView": {
 			"viewName": "sap.ui.core.tutorial.odatav4.view.App",
-			"type": "XML",
-			"async": true,
-			"id": "data"
+			"type": "XML"
 		},
 		"dependencies": {
-			"minUI5Version": "1.48.0",
+			"minUI5Version": "1.60.0",
 			"libs": {
-				"sap.m": {},
 				"sap.ui.core": {},
+				"sap.m": {},
 				"sap.ui.layout": {},
-				"sap.f" : {}
+				"sap.ui.commons": {},
+				"sap.suite.ui.microchart": {}
 			}
 		},
 		"contentDensities": {
 			"compact": true,
 			"cozy": true
 		},
-		"handleValidation": true,
 		"models": {
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
@@ -55,18 +62,73 @@
 					"bundleName": "sap.ui.core.tutorial.odatav4.i18n.i18n"
 				}
 			},
-			"resources": {
-					"css": [{
-						"uri" : "css/style.css"
-						}]
+			"process": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/data/ProcessFlowData.json"
 			},
-			"": {
-				"dataSource": "default",
-				"settings": {
-					"autoExpandSelect": true,
-					"operationMode": "Server",
-					"groupId": "$auto",
-					"synchronizationMode": "None"
+			"business": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/data/BusinessData.json"
+			},
+			"suppliers": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/data/Suppliers.json"
+			},
+			"reviews": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/data/Reviews.json"
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.ui.core.tutorial.odatav4.view",
+				"controlId": "tutorialApp",
+				"controlAggregation": "pages",
+				"transition": "fade",
+				"bypassed": {
+					"target": [
+						"startpage"
+					]
+				}
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": "startpage"
+				}, {
+					"pattern": "processFlow",
+					"name": "processFlow",
+					"target": "processFlow"
+				}, {
+					"pattern": "chartContainer",
+					"name": "chartContainer",
+					"target": "chartContainer"
+				},
+				{
+					"pattern": "reviews",
+					"name": "reviews",
+					"target": "reviews"
+				}
+			],
+			"targets": {
+				"startpage": {
+					"viewName": "Startpage",
+					"viewLevel": 0
+				},
+				"processFlow": {
+					"viewName": "ProcessFlow",
+					"viewLevel": 1
+				},
+				"chartContainer": {
+					"viewName": "ChartContainer",
+					"viewLevel": 1
+				},
+				"reviews": {
+					"viewName": "Reviews",
+					"viewLevel": 1
 				}
 			}
 		}
