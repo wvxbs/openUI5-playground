@@ -1,16 +1,31 @@
 {
-  "name": "ODataV4Tutorial",
+  "name": "openui5-playground",
+  "version": "0.1.0",
   "private": true,
-  "version": "1.0.0",
-  "author": "SAP SE",
-  "description": "UI5 Demo App - ODataV4 Tutorial",
-  "scripts": {
-    "start": "ui5 serve"
-  },
   "dependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-scripts": "2.1.8",
     "@openui5/sap.m": "^1",
     "@openui5/sap.ui.core": "^1",
     "@openui5/sap.ui.layout": "^1",
-    "@openui5/themelib_sap_belize": "^1"
-  }
+    "@openui5/themelib_sap_belize": "^1",
+    "@ui5/cli": "^1.2.1",
+    "@ui5/server": "^1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
