@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
-import Layout from './webapp/Layout';
+import './index.css';
+import List from './content/List';
 
 class App extends Component {
   render() {
     return (
-      <Layout />  
-    )
+      <div className="container">
+        <div className="row">
+          <List />
+          <List />
+          <List />
+        </div>
+      </div>
+    );
   }
 }
 
